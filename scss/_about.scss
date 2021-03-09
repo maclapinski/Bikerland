@@ -1,0 +1,10 @@
+.about {
+  @include section-styling;
+  flex-direction: column-reverse;
+  &-text {
+    @include text-styling;
+  }
+  &-img {
+    @include image-styling("/assets/image-2.jpg");
+  }
+}

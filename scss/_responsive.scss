@@ -1,0 +1,111 @@
+@include media-xs {
+  header {
+    h1 {
+      font-size: 17vw !important;
+      margin-top: 36vh !important;
+    }
+  }
+}
+
+@include media-sm {
+  header {
+    h1 {
+      font-size: 13vw !important;
+      margin-top: 43vh !important;
+    }
+  }
+}
+@include media-md {
+  header {
+    h1 {
+      font-size: 16vw !important;
+      margin-top: 31vh !important;
+    }
+  }
+}
+
+@include media-lg {
+  header {
+    h1 {
+      font-size: 16vw !important;
+      margin-top: 35vh !important;
+    }
+
+    .social-icons {
+      a {
+        i {
+          font-size: 50px !important;
+        }
+      }
+    }
+  }
+
+  .about {
+    flex-direction: row;
+    &-text {
+      width: 50%;
+      text-align: left;
+      padding: 3rem 4rem;
+    }
+    &-img {
+      width: 50%;
+      height: 40vw;
+    }
+  }
+  .mission {
+    flex-direction: row;
+    &-text {
+      width: 50%;
+      text-align: left;
+      padding: 3rem 4rem;
+    }
+    &-img {
+      width: 50%;
+      height: 40vw;
+    }
+  }
+  .alissa {
+    flex-direction: row;
+    padding-top: 3rem;
+    &-text {
+      width: 70%;
+      text-align: left;
+      padding: 3rem 4rem;
+    }
+    &-img {
+      width: 30%;
+      img {
+        max-width: 75%;
+      }
+    }
+  }
+}
+
+@include media-xl {
+  header {
+    background-image: url(/assets/image-1.jpg) !important;
+
+    h1 {
+      font-size: 11vw !important;
+      margin-top: 36vh !important;
+    }
+
+    .nav {
+      display: block;
+    }
+
+    .social-icons {
+      bottom: 50vh !important;
+      transform: translateY(50%);
+      right: 3rem !important;
+      a {
+        i {
+          font-size: 50px !important;
+        }
+      }
+    }
+  }
+}
+
+@include media-xl {
+}

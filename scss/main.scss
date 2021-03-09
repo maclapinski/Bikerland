@@ -1,0 +1,52 @@
+@import "setup";
+@import "config";
+@import "global";
+@import "nav-and-header";
+@import "about";
+@import "mission";
+@import "alissa";
+@import "responsive";
+
+body {
+  background: $white;
+  color: $darkErGrey;
+  height: 100vh;
+  font-family: "Catamaran", sans-serif;
+  font-size: 20px;
+  line-height: 29px;
+}
+
+
+main {
+  height: 100%;
+  width: 100%;
+
+  .read-more {
+    width: fit-content;
+    padding: 10px 25px;
+    margin-top: 20px;
+    color: $squash;
+    cursor: pointer;
+    background-color: $darkErGrey;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    display: inline-block;
+    font-weight: 700;
+    border: 2px solid $darkErGrey;
+    &:hover {
+      border: 2px solid $squash;
+    }
+  }
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: $darkErGrey;
+}

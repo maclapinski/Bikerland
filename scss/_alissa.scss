@@ -1,0 +1,27 @@
+.alissa {
+  @include section-styling;
+  flex-direction: column;
+  background-color: $lightGrey;
+
+  &-text {
+    width: 100%;
+    @include text-styling;
+
+    p {
+      text-align: left;
+    }
+  }
+  &-img {
+    // height: 40vw;
+    display: flex;
+    width: 90%;
+    // padding-top: 10vw;
+    justify-content: flex-end;
+    align-items: flex-start;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}

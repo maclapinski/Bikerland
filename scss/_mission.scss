@@ -1,0 +1,10 @@
+.mission {
+  @include section-styling;
+  flex-direction: column;
+  &-text {
+    @include text-styling;
+  }
+  &-img {
+    @include image-styling("/assets/image-7.jpg");
+  }
+}
