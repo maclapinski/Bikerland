@@ -22,6 +22,10 @@
       margin-top: 31vh !important;
     }
   }
+  .links{
+    flex-direction: row;
+    height: 40vh;
+  }
 }
 
 @include media-lg {
@@ -83,7 +87,7 @@
 
 @include media-xl {
   header {
-    background-image: url(https://maclapinski.github.io/Bikerland2/assets/image-1.jpg) !important;
+    background-image: url(https://maclapinski.github.io/Bikerland/assets/image-1.jpg) !important;
 
     h1 {
       font-size: 11vw !important;
