@@ -5,6 +5,6 @@
     @include text-styling;
   }
   &-img {
-    @include image-styling("/assets/image-2.jpg");
+    @include image-styling("https://maclapinski.github.io/Bikerland2/assets/image-2.jpg");
   }
 }
