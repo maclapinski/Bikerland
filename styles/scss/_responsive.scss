@@ -26,6 +26,10 @@
     flex-direction: row;
     height: 40vh;
   }
+
+  .contact{
+    flex-direction: row;
+  }
 }
 
 @include media-lg {
@@ -83,6 +87,15 @@
       }
     }
   }
+
+  .the-gram-images{
+    flex-direction: row;
+  }
+
+  .contact {
+    width: 80%;
+    max-width: 1200px;
+  }
 }
 
 @include media-xl {
@@ -111,5 +124,47 @@
   }
 }
 
-@include media-xl {
+@include media-xxl {
+  .about {
+    flex-direction: row;
+    &-text {
+      width: 50%;
+      text-align: left;
+      padding-left: 20%;
+      padding-right: 5%;
+    }
+    &-img {
+      width: 50%;
+      height: 40vw;
+    }
+  }
+  .mission {
+    flex-direction: row;
+    &-text {
+      width: 50%;
+      text-align: left;
+      padding-left: 5%;
+      padding-right: 20%;
+    }
+    &-img {
+      width: 50%;
+      height: 40vw;
+    }
+  }
+  .alissa {
+    flex-direction: row;
+    padding-top: 3rem;
+    &-text {
+      width: 70%;
+      text-align: left;
+      padding-left: 5%;
+      padding-right: 20%;
+    }
+    &-img {
+      width: 30%;
+      img {
+        max-width: 75%;
+      }
+    }
+  }
 }

@@ -6,6 +6,8 @@
 @import "mission";
 @import "alissa";
 @import "links";
+@import "theGram";
+@import "footer";
 @import "responsive";
 
 
@@ -20,8 +22,6 @@ body {
 
 
 main {
-  height: 100%;
-  width: 100%;
 
   .read-more {
     width: fit-content;
@@ -44,11 +44,13 @@ main {
 }
 
 footer {
-  font-size: 1rem;
-  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   bottom: 0.4rem;
   right: 1rem;
   text-align: right;
-  padding: 1rem;
-  color: $darkErGrey;
+  color: $white;
+  background-color: $darkErGrey;
 }
