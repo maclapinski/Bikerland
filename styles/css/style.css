@@ -695,10 +695,6 @@ nav ul li {
   margin: 1rem 1rem;
 }
 
-nav ul li:hover {
-  border-bottom: 4px solid #f2a11c;
-}
-
 .contact {
   width: 100%;
   margin: auto;
