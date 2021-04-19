@@ -1,10 +1,51 @@
 .mission {
-  @include section-styling;
+  background-color: $lightGrey;
   flex-direction: column;
+  
+  @include section-styling;
+  
   &-text {
     @include text-styling;
   }
+
   &-img {
     @include image-styling("https://maclapinski.github.io/Bikerland/assets/image-7.jpg");
   }
 }
+
+@include media-lg {
+
+  .mission {
+    flex-direction: row;
+
+    &-text {
+      width: 50%;
+      max-width: 600px;
+      padding: 3rem 4rem;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    &-img {
+      width: 50%;
+      height: 40vw;
+    }
+  }
+}
+
+@include media-xxl {
+  
+  .mission {
+    flex-direction: row;
+
+    &-text {
+      padding-left: 80px;
+    }
+
+    &-img {
+      width: 50%;
+      height: 40vw;
+    }
+  }
+}
+

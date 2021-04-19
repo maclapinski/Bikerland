@@ -28,3 +28,14 @@
     color: $squash;
   }
 }
+
+/* Portrait tablet & landscape phone */
+@include media-md {
+  
+  .links {
+    flex-direction: row;
+    height: 40vh;
+  }
+}
+
+

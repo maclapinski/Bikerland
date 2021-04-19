@@ -279,6 +279,13 @@ img {
   display: block;
 }
 
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  display: inherit;
+}
+
 header {
   background-position: center;
   background-size: cover;
@@ -300,18 +307,26 @@ header {
   color: #f2a11c;
   padding: 1rem 1rem;
   background-image: url(https://maclapinski.github.io/Bikerland/assets/image-1-mobile@2x.jpg);
+  /* hamburger menu styling */
+  /* social icons styling */
 }
 
 header h1 {
-  font-size: 17vw;
-  margin-top: 34vh;
+  font-size: 3.8rem;
+  margin-top: 35vh;
 }
 
-header .nav {
-  display: none;
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-header .nav-menu {
+header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,19 +335,54 @@ header .nav-menu {
           justify-content: center;
 }
 
-header .nav-menu__item {
-  padding: 20px 20px;
-  list-style: none;
+header nav ul li {
+  margin: 1rem 1rem;
 }
 
-header .nav-menu__link {
-  text-decoration: none;
+header nav ul li a {
   color: #ffffff;
-  font-size: 1.5rem;
 }
 
-header .nav-menu__link:hover {
-  border-bottom: 4px solid #f2a11c;
+header nav ul li a:hover, header nav ul li a:focus {
+  border-bottom: 2px solid #f2a11c;
+}
+
+header i.fa-bars,
+header input[type="checkbox"] {
+  display: none;
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  z-index: 10;
+  text-shadow: 0px 3px 5px #1f2022;
+  color: white;
+  font-size: 3rem;
+  border-radius: 5px;
+  padding: 0 3px;
+  cursor: pointer;
+}
+
+header .header-menu-social-icons {
+  display: none;
+}
+
+header .social-icons {
+  position: relative;
+  bottom: 165px;
+  left: 20px;
+  width: 40px;
+  font-size: 2.5rem;
+  margin: 0 0 0 auto;
+}
+
+header .social-icons li {
+  display: block;
+  margin: 12px 0;
+}
+
+header .social-icons a:hover,
+header .social-icons a:focus {
+  color: white;
 }
 
 header .social-icons {
@@ -383,6 +433,8 @@ header .hero__scroll {
 header .hero__scroll .chevron {
   display: block;
   color: #f2a11c;
+  margin: 0 auto;
+  width: 50px;
   -webkit-animation: pulse 1s infinite;
   animation: pulse 1s infinite;
 }
@@ -422,9 +474,9 @@ header .hero__scroll .chevron::before {
   border-width: 0.25em 0.25em 0 0;
   content: "";
   display: inline-block;
-  height: 7vh;
-  width: 7vh;
-  font-size: 6vh;
+  height: 2rem;
+  width: 2rem;
+  font-size: 2rem;
   position: relative;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -449,7 +501,101 @@ header .hero__scroll .chevron.left:before {
   transform: rotate(-135deg);
 }
 
+/* Portrait phone*/
+@media screen and (min-width: 375px) {
+  header h1 {
+    font-size: 17vw;
+    margin-top: 36vh !important;
+  }
+}
+
+/* Portrait tablet & landscape phone */
+@media (max-width: 768px) {
+  header .social-icons {
+    display: none;
+  }
+  header nav a {
+    color: #1f2022;
+  }
+  header i.fa-bars {
+    display: inherit;
+  }
+  header .header-menu {
+    position: fixed;
+    display: block;
+    z-index: 10;
+    background-color: white;
+    height: 100vh;
+    width: 33vw;
+    top: 0;
+    left: -33vw;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    color: black;
+  }
+  header .header-menu li,
+  header .header-menu-social-icons {
+    display: block;
+    border-bottom: 2px solid #1f2022;
+    margin: 0;
+    padding: 20px 0;
+  }
+  header .header-menu li:last-of-type {
+    border-bottom: none;
+    font-family: "Pacifico", cursive;
+    padding-top: 42px;
+  }
+  header input[type="checkbox"]:checked + .header-menu {
+    left: 0;
+  }
+  header .header-menu li:focus-within a,
+  header .header-menu a:hover,
+  header .header-menu a:active {
+    color: #f2a11c;
+    border-bottom: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header h1 {
+    font-size: 16vw !important;
+    margin-top: 35vh !important;
+  }
+  header .social-icons a i {
+    font-size: 40px !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    background-image: url(https://maclapinski.github.io/Bikerland/assets/image-1.jpg) !important;
+  }
+  header h1 {
+    font-size: 11vw !important;
+    margin-top: 36vh !important;
+  }
+  header .hero__scroll .chevron::before {
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2.5rem;
+  }
+  header .nav {
+    display: block;
+  }
+  header .social-icons {
+    bottom: 50vh !important;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    right: 3rem !important;
+  }
+}
+
 .about {
+  background-color: #f4f4f4;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -460,15 +606,11 @@ header .hero__scroll .chevron.left:before {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 1.2rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
 }
 
 .about-text {
   text-align: center;
-  padding: 3rem 3rem;
+  padding: 3rem 1rem;
 }
 
 .about-text h1 {
@@ -486,7 +628,38 @@ header .hero__scroll .chevron.left:before {
   background-image: url("https://maclapinski.github.io/Bikerland/assets/image-2.jpg");
 }
 
+@media screen and (min-width: 1024px) {
+  .about {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .about-text {
+    width: 50%;
+    max-width: 600px;
+    padding: 3rem 4rem;
+    margin-left: auto;
+    text-align: left;
+  }
+  .about-img {
+    width: 50%;
+    height: 40vw;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .about-text {
+    padding-right: 80px;
+  }
+}
+
 .mission {
+  background-color: #f4f4f4;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -497,15 +670,11 @@ header .hero__scroll .chevron.left:before {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 1.2rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .mission-text {
   text-align: center;
-  padding: 3rem 3rem;
+  padding: 3rem 1rem;
 }
 
 .mission-text h1 {
@@ -523,7 +692,49 @@ header .hero__scroll .chevron.left:before {
   background-image: url("https://maclapinski.github.io/Bikerland/assets/image-7.jpg");
 }
 
+@media screen and (min-width: 1024px) {
+  .mission {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .mission-text {
+    width: 50%;
+    max-width: 600px;
+    padding: 3rem 4rem;
+    margin-right: auto;
+    text-align: left;
+  }
+  .mission-img {
+    width: 50%;
+    height: 40vw;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .mission {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .mission-text {
+    padding-left: 80px;
+  }
+  .mission-img {
+    width: 50%;
+    height: 40vw;
+  }
+}
+
 .alissa {
+  padding: 50px 0;
+  background-color: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -534,17 +745,25 @@ header .hero__scroll .chevron.left:before {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 1.2rem;
+}
+
+.alissa-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #f4f4f4;
-}
-
-.alissa-text {
-  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
-  padding: 3rem 3rem;
+  padding: 3rem 1rem;
 }
 
 .alissa-text h1 {
@@ -556,22 +775,40 @@ header .hero__scroll .chevron.left:before {
 }
 
 .alissa-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 90%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  float: left;
 }
 
 .alissa-img img {
+  display: block;
   max-width: 100%;
   height: auto;
-  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .alissa {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .alissa-text {
+    width: calc(((100% - 40px) / 3) * 2);
+    padding: 3rem 0;
+    margin-left: 30px;
+    text-align: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .alissa-img {
+    width: calc((100% - 40px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .alissa {
+    padding: 100px 0;
+  }
 }
 
 .links {
@@ -625,6 +862,17 @@ header .hero__scroll .chevron.left:before {
   color: #f2a11c;
 }
 
+/* Portrait tablet & landscape phone */
+@media screen and (min-width: 768px) {
+  .links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 40vh;
+  }
+}
+
 .the-gram {
   width: 100%;
   height: 100%;
@@ -672,341 +920,216 @@ header .hero__scroll .chevron.left:before {
   margin: auto;
 }
 
-nav {
-  margin: 1rem auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-nav ul li {
-  margin: 1rem 1rem;
-}
-
-.contact {
-  width: 100%;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-}
-
-.contact h2 {
-  color: #f2a11c;
-  margin-bottom: 1rem;
-}
-
-.contact-text {
-  margin: 1rem auto;
-}
-
-.contact .subscribe-container {
-  width: 100%;
-  max-width: 350px;
-  margin: 1rem auto 2rem;
-}
-
-.copyright {
-  background-color: #000000;
-}
-
-.copyright p {
-  color: #4a4a4a;
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 10px;
-}
-
-.email {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-/* form styling */
-label {
-  font-size: 1rem;
-}
-
-form input {
-  font-size: 1rem;
-  height: 40px;
-  margin: 0 auto;
-}
-
-input[type=submit] {
-  cursor: pointer;
-  width: 90%;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #1f2022;
-  background-color: #F2A11C;
-  border: #F2A11C;
-  margin-top: 15px;
-  padding: 7px 10px;
-}
-
-input[type=email] {
-  width: 90%;
-  border: none;
-  padding: 7px 25px;
-  margin-top: 15px;
-}
-
-input[type=email]::-webkit-input-placeholder {
-  font-size: 1rem;
-  color: #1F2022;
-  opacity: 0.9;
-  text-align: center;
-}
-
-input[type=email]:-ms-input-placeholder {
-  font-size: 1rem;
-  color: #1F2022;
-  opacity: 0.9;
-  text-align: center;
-}
-
-input[type=email]::-ms-input-placeholder {
-  font-size: 1rem;
-  color: #1F2022;
-  opacity: 0.9;
-  text-align: center;
-}
-
-input[type=email]::placeholder {
-  font-size: 1rem;
-  color: #1F2022;
-  opacity: 0.9;
-  text-align: center;
-}
-
-@media screen and (min-width: 375px) {
-  header h1 {
-    font-size: 17vw !important;
-    margin-top: 36vh !important;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  header h1 {
-    font-size: 13vw !important;
-    margin-top: 43vh !important;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  header h1 {
-    font-size: 16vw !important;
-    margin-top: 31vh !important;
-  }
-  .links {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    height: 40vh;
-  }
-  .contact {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
 @media screen and (min-width: 1024px) {
-  header h1 {
-    font-size: 16vw !important;
-    margin-top: 35vh !important;
-  }
-  header .social-icons a i {
-    font-size: 50px !important;
-  }
-  .about {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .about-text {
-    width: 50%;
-    text-align: left;
-    padding: 3rem 4rem;
-  }
-  .about-img {
-    width: 50%;
-    height: 40vw;
-  }
-  .mission {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .mission-text {
-    width: 50%;
-    text-align: left;
-    padding: 3rem 4rem;
-  }
-  .mission-img {
-    width: 50%;
-    height: 40vw;
-  }
-  .alissa {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding-top: 3rem;
-  }
-  .alissa-text {
-    width: 70%;
-    text-align: left;
-    padding: 3rem 4rem;
-  }
-  .alissa-img {
-    width: 30%;
-  }
-  .alissa-img img {
-    max-width: 75%;
-  }
   .the-gram-images {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .contact {
-    width: 80%;
+}
+
+footer {
+  /* form styling */
+}
+
+footer nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer nav ul li {
+  margin: 1rem 1rem;
+}
+
+footer .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .contact h2 {
+  margin-bottom: 1rem;
+  color: #f2a11c;
+}
+
+footer .contact-text {
+  margin: 1rem auto;
+}
+
+footer .contact .subscribe-container {
+  width: 100%;
+  max-width: 550px;
+  margin: 1rem auto 2rem;
+  text-align: center;
+}
+
+footer .copyright {
+  background-color: #000000;
+}
+
+footer .copyright p {
+  padding: 10px;
+  color: #4a4a4a;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+footer .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer label {
+  font-size: 1rem;
+}
+
+footer form input {
+  height: 40px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+footer input[type="submit"] {
+  width: 90%;
+  min-width: 300px;
+  padding: 7px 10px;
+  border: #f2a11c;
+  margin-top: 15px;
+  background-color: #f2a11c;
+  color: #1f2022;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+footer input[type="email"] {
+  width: 90%;
+  min-width: 300px;
+  padding: 7px 25px;
+  border: none;
+  margin-top: 15px;
+}
+
+footer input[type="email"]::-webkit-input-placeholder {
+  color: #1f2022;
+  opacity: 0.9;
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer input[type="email"]:-ms-input-placeholder {
+  color: #1f2022;
+  opacity: 0.9;
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer input[type="email"]::-ms-input-placeholder {
+  color: #1f2022;
+  opacity: 0.9;
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer input[type="email"]::placeholder {
+  color: #1f2022;
+  opacity: 0.9;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  footer .contact {
     max-width: 1200px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  header {
-    background-image: url(https://maclapinski.github.io/Bikerland/assets/image-1.jpg) !important;
-  }
-  header h1 {
-    font-size: 11vw !important;
-    margin-top: 36vh !important;
-  }
-  header .nav {
-    display: block;
-  }
-  header .social-icons {
-    bottom: 50vh !important;
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
-    right: 3rem !important;
-  }
-  header .social-icons a i {
-    font-size: 50px !important;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .about {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .about-text {
-    width: 50%;
+  footer .contact .contact-text {
     text-align: left;
-    padding-left: 20%;
-    padding-right: 5%;
   }
-  .about-img {
-    width: 50%;
-    height: 40vw;
-  }
-  .mission {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .mission-text {
-    width: 50%;
+  footer .contact .subscribe-container {
+    width: auto;
     text-align: left;
-    padding-left: 5%;
-    padding-right: 20%;
   }
-  .mission-img {
-    width: 50%;
-    height: 40vw;
+  footer .contact .email-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  .alissa {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding-top: 3rem;
+  footer .contact .email-input input[type="submit"] {
+    max-width: 150px;
+    min-width: auto;
   }
-  .alissa-text {
-    width: 70%;
+  footer .contact .email-input input[type="email"]::-webkit-input-placeholder {
     text-align: left;
-    padding-left: 5%;
-    padding-right: 20%;
   }
-  .alissa-img {
-    width: 30%;
+  footer .contact .email-input input[type="email"]:-ms-input-placeholder {
+    text-align: left;
   }
-  .alissa-img img {
-    max-width: 75%;
+  footer .contact .email-input input[type="email"]::-ms-input-placeholder {
+    text-align: left;
+  }
+  footer .contact .email-input input[type="email"]::placeholder {
+    text-align: left;
   }
 }
 
 body {
+  height: 100vh;
   background: #ffffff;
   color: #1f2022;
-  height: 100vh;
   font-family: "Catamaran", sans-serif;
   font-size: 20px;
   line-height: 29px;
 }
 
 main .read-more {
+  display: inline-block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 10px 25px;
+  border: 2px solid #1f2022;
   margin-top: 20px;
-  color: #f2a11c;
-  cursor: pointer;
   background-color: #1f2022;
-  text-transform: uppercase;
+  color: #f2a11c;
+  font-size: 1.2rem;
+  font-weight: 700;
   text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.2rem;
-  display: inline-block;
-  font-weight: 700;
-  border: 2px solid #1f2022;
 }
 
 main .read-more:hover {
@@ -1014,10 +1137,15 @@ main .read-more:hover {
 }
 
 footer {
-  width: 100%;
+  right: 1rem;
+  bottom: 0.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  background-color: #1f2022;
+  color: #ffffff;
+  text-align: right;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1025,10 +1153,5 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  bottom: 0.4rem;
-  right: 1rem;
-  text-align: right;
-  color: #ffffff;
-  background-color: #1f2022;
 }
 /*# sourceMappingURL=style.css.map */

@@ -29,3 +29,12 @@
     }
   }
 }
+
+@include media-lg {
+
+  .the-gram-images {
+    flex-direction: row;
+  }
+}
+
+

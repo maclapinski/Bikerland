@@ -14,30 +14,69 @@ header {
   background-image: url(https://maclapinski.github.io/Bikerland/assets/image-1-mobile@2x.jpg);
 
   h1 {
-    font-size: 17vw;
-    margin-top: 34vh;
+    font-size: 3.8rem;
+    margin-top: 35vh;
   }
-
-  .nav {
-    display: none;
-    
-    &-menu {
+  nav {
+    display: flex;
+    margin: 1rem auto;
+    justify-content: center;
+    ul {
       display: flex;
       justify-content: center;
+      li {
+        margin: 1rem 1rem;
 
-      &__item {
-        padding: 20px 20px;
-        list-style: none;
-      }
-      &__link {
-        text-decoration: none;
-        color: $white;
-        font-size: 1.5rem;
-        &:hover {
-          border-bottom: 4px solid $squash;
+        a{
+          color: $white;
+      
+          &:hover,
+          &:focus {
+            border-bottom: 2px solid $squash;
+          }
         }
       }
     }
+  }
+
+  /* hamburger menu styling */
+  i.fa-bars,
+  input[type="checkbox"] {
+    display: none;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    z-index: 10;
+    text-shadow: 0px 3px 5px #1f2022;
+    color: white;
+    font-size: 3rem;
+    border-radius: 5px;
+    padding: 0 3px;
+    cursor: pointer;
+  }
+
+  .header-menu-social-icons {
+    display: none;
+  }
+
+  /* social icons styling */
+  .social-icons {
+    position: relative;
+    bottom: 165px;
+    left: 20px;
+    width: 40px;
+    font-size: 2.5rem;
+    margin: 0 0 0 auto;
+  }
+
+  .social-icons li {
+    display: block;
+    margin: 12px 0;
+  }
+
+  .social-icons a:hover,
+  .social-icons a:focus {
+    color: white;
   }
 
   .social-icons {
@@ -54,6 +93,7 @@ header {
       padding: 4px;
       margin: 3px 0px;
       color: $squash;
+
       @include transition-ease;
 
       i {
@@ -71,12 +111,16 @@ header {
   .hero__scroll {
     margin-top: auto;
     padding-bottom: 25px;
+
     .chevron {
       display: block;
       color: $squash;
+      margin: 0 auto;
+      width: 50px;
       -webkit-animation: pulse 1s infinite;
       animation: pulse 1s infinite;
     }
+
     @-webkit-keyframes pulse {
       0% {
         -webkit-transform: translate(0, 0);
@@ -112,15 +156,14 @@ header {
       border-width: 0.25em 0.25em 0 0;
       content: "";
       display: inline-block;
-      height: 7vh;
-      width: 7vh;
-      font-size: 6vh;
+      height: 2rem;
+      width: 2rem;
+      font-size: 2rem;
       position: relative;
       -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
       transform: rotate(-45deg);
       vertical-align: top;
-      
     }
 
     .chevron.right:before {
@@ -142,6 +185,126 @@ header {
       -webkit-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
       transform: rotate(-135deg);
+    }
+  }
+}
+
+/* Portrait phone*/
+@include media-xs {
+
+  header {
+
+    h1 {
+      font-size: 17vw;
+      margin-top: 36vh !important;
+    }
+  }
+}
+
+/* Portrait tablet & landscape phone */
+@media (max-width: 768px) {
+
+  header {
+
+    .social-icons {
+      display: none;
+    }
+
+    nav a{
+      color: $darkErGrey;
+    }
+
+    i.fa-bars {
+      display: inherit;
+    }
+
+    .header-menu {
+      position: fixed;
+      display: block;
+      z-index: 10;
+      background-color: white;
+      height: 100vh;
+      width: 33vw;
+      top: 0;
+      left: -33vw;
+      transition: all 0.5s ease;
+      color: black;
+    }
+
+    .header-menu li,
+    .header-menu-social-icons {
+      display: block;
+      border-bottom: 2px solid #1f2022;
+      margin: 0;
+      padding: 20px 0;
+    }
+
+    .header-menu li:last-of-type {
+      border-bottom: none;
+      font-family: "Pacifico", cursive;
+      padding-top: 42px;
+    }
+
+    input[type="checkbox"]:checked + .header-menu {
+      left: 0;
+    }
+
+    .header-menu li:focus-within a,
+    .header-menu a:hover,
+    .header-menu a:active {
+      color: #f2a11c;
+      border-bottom: none;
+    }
+  }
+}
+
+@include media-lg {
+
+  header {
+
+    h1 {
+      font-size: 16vw !important;
+      margin-top: 35vh !important;
+    }
+    .social-icons {
+
+      a {
+
+        i {
+          font-size: 40px !important;
+        }
+      }
+    }
+  }
+}
+
+@include media-xl {
+
+  header {
+    background-image: url(https://maclapinski.github.io/Bikerland/assets/image-1.jpg) !important;
+
+    h1 {
+      font-size: 11vw !important;
+      margin-top: 36vh !important;
+    }
+
+    .hero__scroll {
+
+      .chevron::before {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 2.5rem;
+      }
+    }
+
+    .nav {
+      display: block;
+    }
+
+    .social-icons {
+      bottom: 50vh !important;
+      transform: translateY(50%);
+      right: 3rem !important;
     }
   }
 }

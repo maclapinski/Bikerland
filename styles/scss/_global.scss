@@ -36,6 +36,9 @@ img {
     display: block;
 }
 
-// .hidden-on-mobile {
-//     display: none;
-// }
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    display: inherit;
+}

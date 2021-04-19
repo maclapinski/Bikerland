@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="image" property="og:image" content="https://maclapinski.github.io/Bikerland/assets/Bikerland_preview.png">
+    <meta
+      name="image"
+      property="og:image"
+      content="https://maclapinski.github.io/Bikerland/assets/Bikerland_preview.png"
+    />
+    <meta
+      property="og:description"
+      content="Single-page, pixel-perfect PSD conversion. Accessible & responsive across all devices."
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -21,39 +29,75 @@
     <title>My Bikerland</title>
   </head>
   <body>
+    <!------------ SECTION: HEADER ------------>
     <header>
-      <div class="menu-btn">
-        <span class="menu-btn__burger"></span>
-      </div>
-      <nav class="nav">
-        <ul class="nav-menu">
-          <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link"> Home </a>
+      <nav>
+        <label for="ham-menu">
+          <i class="fa fa-bars"></i>
+          <span class="sr-only">Menu icon</span>
+        </label>
+        <input type="checkbox" id="ham-menu" name="ham-menu" />
+        <ul class="header-menu">
+          <li>
+            <a href="#">Home</a>
           </li>
-          <li class="nav-menu__item">
-            <a href="#about" class="nav-menu__link"> About </a>
+          <li>
+            <a href="#about">About</a>
           </li>
-          <li class="nav-menu__item">
-            <a href="#blog" class="nav-menu__link"> Blog </a>
+          <li>
+            <a href="#blog">Blog</a>
           </li>
-          <li class="nav-menu__item">
-            <a href="#contact" class="nav-menu__link"> Contact </a>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li class="header-menu-social-icons">
+            <a href="#">
+              <i class="fab fa-instagram" title="Instagram"></i>
+              <span class="sr-only">instagram symbol</span>
+            </a>
+          </li>
+          <li class="header-menu-social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-f" title="Facebook"></i>
+              <span class="sr-only">facebook symbol</span>
+            </a>
+          </li>
+          <li class="header-menu-social-icons">
+            <a href="#"
+              ><i class="fab fa-snapchat-ghost" title="Snapchat"></i>
+              <span class="sr-only">snapchat symbol</span>
+            </a>
+          </li>
+          <li class="header-menu-social-icons">
+            <a href="#">
+              <i class="fab fa-twitter" title="Twitter"></i>
+              <span class="sr-only">twitter symbol</span>
+            </a>
+          </li>
+          <li class="header-menu-social-icons">
+            <a href="#">Bikerland</a>
           </li>
         </ul>
       </nav>
+
       <h1 data-aos="zoom-in">Bikerland</h1>
+
       <div class="social-icons">
         <a href="#!">
           <i class="fab fa-twitter"></i>
+          <span class="sr-only">Twitter</span>
         </a>
         <a href="#!">
           <i class="fab fa-facebook"></i>
+          <span class="sr-only">Facebook</span>
         </a>
         <a href="#!">
           <i class="fab fa-instagram"></i>
+          <span class="sr-only">Instagram</span>
         </a>
         <a href="#!">
           <i class="fab fa-snapchat-ghost"></i>
+          <span class="sr-only">Snapchat</span>
         </a>
       </div>
       <span class="hero__scroll aos-init aos-animate">
@@ -61,6 +105,7 @@
       </span>
     </header>
     <main>
+      <!------------ SECTION: ABOUT US ------------>
       <section>
         <div class="about" id="about">
           <div class="about-text">
@@ -92,40 +137,56 @@
         </div>
       </section>
       <section>
-        <div class="alissa" id="blog">
-          <div class="alissa-img">
-            <img
-              src="https://maclapinski.github.io/Bikerland/assets/image-6.jpg"
-              alt=""
-            />
-          </div>
-          <div class="alissa-text">
-            <h1>Meet Alissa</h1>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis,
-              commodi? Porro ipsum possimus minus architecto repudiandae sint
-              veritatis nemo consequatur eveniet explicabo est earum illum enim
-              aut obcaecati.Porro ipsum possimus minus architecto repudiandae
-              sint veritatis nemo consequatur eveniet explicabo est earum illum
-              enim aut obcaecati.
-            </p>
-            <a href="#" class="read-more">Read More</a>
+        <div class="wrapper">
+          <div class="alissa" id="blog">
+            <div class="alissa-img">
+              <img
+                src="https://maclapinski.github.io/Bikerland/assets/image-6.jpg"
+                alt="Woman on a road bike in a city, going fast"
+              />
+            </div>
+            <div class="alissa-text">
+              <h1>Meet Alissa</h1>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis,
+                commodi? Porro ipsum possimus minus architecto repudiandae sint
+                veritatis nemo consequatur eveniet explicabo est earum illum
+                enim aut obcaecati.Porro ipsum possimus minus architecto
+                repudiandae sint veritatis nemo consequatur eveniet explicabo
+                est earum illum enim aut obcaecati.
+              </p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
           </div>
         </div>
       </section>
+      <!------------ SECTION: LINKS ------------>
       <section>
         <div class="links">
           <div class="products">
-            <a href="#"><i class="fas fa-bicycle"></i>Products</a>
+            <a href="#"
+              ><i class="fas fa-bicycle"></i
+              ><span class="sr-only">bike symbol</span>
+              <p>Products</p>
+            </a>
           </div>
           <div class="community">
-            <a href="#"><i class="fas fa-users"></i>Community</a>
+            <a href="#"
+              ><i class="fas fa-users"></i
+              ><span class="sr-only">users symbol</span>
+              <p>Community</p>
+            </a>
           </div>
           <div class="reachOut">
-            <a href="#"><i class="fas fa-phone-alt"></i>Reach out</a>
+            <a href="#"
+              ><i class="fas fa-phone-alt"></i
+              ><span class="sr-only">phone symbol</span>
+              <p>Reach out</p>
+            </a>
           </div>
         </div>
       </section>
+      <!------------ SECTION: THE GRAM ------------>
       <section>
         <div class="the-gram">
           <h1 class="the-gram-title">The Gram</h1>
@@ -133,25 +194,26 @@
             <div class="the-gram-image">
               <img
                 src="https://maclapinski.github.io/Bikerland/assets/image-8.jpg"
-                alt=""
+                alt="a female biker with a grey sweater and red helmet biking next to a brick house"
               />
             </div>
             <div class="the-gram-image">
               <img
                 src="https://maclapinski.github.io/Bikerland/assets/image-3.jpg"
-                alt=""
+                alt="a black and white image of a male biker biking along the road next to a crowd of onlookers"
               />
             </div>
             <div class="the-gram-image hidden-on-mobile">
               <img
                 src="https://maclapinski.github.io/Bikerland/assets/image-4.jpg"
-                alt=""
+                alt="an old, white bike leaning against the wall of a wooden house"
               />
             </div>
           </div>
         </div>
       </section>
     </main>
+    <!------------ SECTION: FOOTER ------------>
     <footer>
       <nav>
         <ul>
@@ -171,20 +233,32 @@
         <div class="subscribe-container">
           <h2>Stay updated</h2>
           <form class="email">
-            <label for="email">Subscribe to our newsletter to stay updated.</label>
-            <input type="email" id="email" placeholder="email address">
-            <input type="submit" value="Subscribe">
-        </form>
+            <label for="email"
+              >Subscribe to our newsletter to stay updated.</label
+            >
+            <div class="email-input">
+              <input type="email" id="email" placeholder="email address" />
+              <input type="submit" value="Subscribe" />
+            </div>
+          </form>
         </div>
       </div>
       <div class="copyright">
         <p>Lorem ipsum, dolor</p>
-    </div>
+      </div>
     </footer>
     <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+      //This function hides "scroll down chevron" after page has been scrolled 400px
+      function testScroll() {
+        if (window.pageYOffset > 400) {
+          document.querySelector(".chevron").style.color = "transparent";
+        }
+      }
+      window.onscroll = testScroll;
+      //**********************************
     </script>
   </body>
 </html>

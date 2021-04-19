@@ -8,35 +8,32 @@
 @import "links";
 @import "theGram";
 @import "footer";
-@import "responsive";
-
 
 body {
+  height: 100vh;
   background: $white;
   color: $darkErGrey;
-  height: 100vh;
   font-family: "Catamaran", sans-serif;
   font-size: 20px;
   line-height: 29px;
 }
 
-
 main {
 
   .read-more {
+    display: inline-block;
     width: fit-content;
     padding: 10px 25px;
-    margin-top: 20px;
-    color: $squash;
-    cursor: pointer;
-    background-color: $darkErGrey;
-    text-transform: uppercase;
-    text-align: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    display: inline-block;
-    font-weight: 700;
     border: 2px solid $darkErGrey;
+    margin-top: 20px;
+    background-color: $darkErGrey;
+    color: $squash;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    justify-content: center;
     &:hover {
       border: 2px solid $squash;
     }
@@ -44,13 +41,13 @@ main {
 }
 
 footer {
-  width: 100%;
+  right: 1rem;
+  bottom: 0.4rem;
   display: flex;
+  width: 100%;
+  background-color: $darkErGrey;
+  color: $white;
+  text-align: right;
   justify-content: center;
   flex-direction: column;
-  bottom: 0.4rem;
-  right: 1rem;
-  text-align: right;
-  color: $white;
-  background-color: $darkErGrey;
 }
