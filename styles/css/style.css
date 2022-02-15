@@ -682,7 +682,8 @@ header .hero__scroll .chevron.left:before {
 
 .alissa-img img {
   display: block;
-  max-width: 100%;
+  max-width: 400px;
+  width: 100%;
   height: auto;
 }
 
@@ -774,7 +775,8 @@ header .hero__scroll .chevron.left:before {
 }
 
 .the-gram-images .the-gram-image img {
-  width: 75vw;
+  width: 100%;
+  max-width: 400px;
   margin: auto;
 }
 
