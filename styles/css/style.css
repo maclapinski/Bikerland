@@ -294,7 +294,7 @@ header {
 }
 
 header::before {
-  background: url(/assets/image-1-mobile@2x.avif) no-repeat center center;
+  background: url(/assets/image-1-mobile_2x.avif) no-repeat center center;
   background-color: white;
   background-size: cover;
   content: ' ';
