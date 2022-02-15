@@ -14,8 +14,7 @@ header {
   text-align: center;
 
   &::before {
-    background: url(https://maclapinski.github.io/Bikerland/assets/image-1-mobile@2x.avif)
-      no-repeat center center;
+    background: url(/assets/image-1-mobile@2x.avif) no-repeat center center;
     background-color: white;
     background-size: cover;
     content: ' ';
@@ -285,8 +284,7 @@ header {
 @include media-xl {
   header {
     &::before {
-      background: url(https://maclapinski.github.io/Bikerland/assets/image-1.avif)
-        no-repeat center center;
+      background: url(/assets/image-1.avif) no-repeat center center;
       background-size: cover;
     }
 

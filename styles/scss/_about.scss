@@ -9,13 +9,12 @@
   }
 
   &-img {
-    @include image-styling("https://maclapinski.github.io/Bikerland/assets/image-2.jpg");
+    @include image-styling('/assets/image-2.avif');
   }
 }
 
 // 1024px tablet and up
 @include media-lg {
-
   .about {
     flex-direction: row;
 
@@ -35,12 +34,9 @@
 }
 
 @include media-xxl {
-  
   .about {
-
     &-text {
       padding-right: 80px;
     }
   }
 }
-

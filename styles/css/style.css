@@ -294,7 +294,7 @@ header {
 }
 
 header::before {
-  background: url(https://maclapinski.github.io/Bikerland/assets/image-1-mobile@2x.avif) no-repeat center center;
+  background: url(/assets/image-1-mobile@2x.avif) no-repeat center center;
   background-color: white;
   background-size: cover;
   content: ' ';
@@ -519,7 +519,7 @@ header .hero__scroll .chevron.left:before {
 
 @media screen and (min-width: 1200px) {
   header::before {
-    background: url(https://maclapinski.github.io/Bikerland/assets/image-1.avif) no-repeat center center;
+    background: url(/assets/image-1.avif) no-repeat center center;
     background-size: cover;
   }
   header h1 {
@@ -565,7 +565,7 @@ header .hero__scroll .chevron.left:before {
   display: flex;
   background-size: cover;
   background-position: center;
-  background-image: url("https://maclapinski.github.io/Bikerland/assets/image-2.jpg");
+  background-image: url("/assets/image-2.avif");
 }
 
 @media screen and (min-width: 1024px) {
@@ -615,7 +615,7 @@ header .hero__scroll .chevron.left:before {
   display: flex;
   background-size: cover;
   background-position: center;
-  background-image: url("https://maclapinski.github.io/Bikerland/assets/image-7.jpg");
+  background-image: url("/assets/image-7.avif");
 }
 
 @media screen and (min-width: 1024px) {
@@ -719,7 +719,7 @@ header .hero__scroll .chevron.left:before {
   color: #ffffff;
   background-position: center right;
   background-size: cover;
-  background-image: url("https://maclapinski.github.io/Bikerland/assets/image-5.jpg");
+  background-image: url("/assets/image-5.avif");
 }
 
 .links i {
