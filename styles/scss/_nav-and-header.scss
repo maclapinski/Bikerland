@@ -8,7 +8,6 @@ header {
   text-align: center;
   overflow: hidden;
   height: 101vh;
-  width: 100%;
   color: $squash;
   padding: 1rem 1rem;
   background-image: url(https://maclapinski.github.io/Bikerland/assets/image-1-mobile@2x.jpg);
@@ -27,9 +26,9 @@ header {
       li {
         margin: 1rem 1rem;
 
-        a{
+        a {
           color: $white;
-      
+
           &:hover,
           &:focus {
             border-bottom: 2px solid $squash;
@@ -41,7 +40,7 @@ header {
 
   /* hamburger menu styling */
   i.fa-bars,
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     display: none;
     position: fixed;
     right: 30px;
@@ -154,7 +153,7 @@ header {
     .chevron::before {
       border-style: solid;
       border-width: 0.25em 0.25em 0 0;
-      content: "";
+      content: '';
       display: inline-block;
       height: 2rem;
       width: 2rem;
@@ -191,9 +190,7 @@ header {
 
 /* Portrait phone*/
 @include media-xs {
-
   header {
-
     h1 {
       font-size: 17vw;
       margin-top: 36vh !important;
@@ -203,14 +200,12 @@ header {
 
 /* Portrait tablet & landscape phone */
 @media (max-width: 768px) {
-
   header {
-
     .social-icons {
       display: none;
     }
 
-    nav ul li a{
+    nav ul li a {
       color: $darkErGrey;
     }
 
@@ -241,11 +236,11 @@ header {
 
     .header-menu li:last-of-type {
       border-bottom: none;
-      font-family: "Pacifico", cursive;
+      font-family: 'Pacifico', cursive;
       padding-top: 42px;
     }
 
-    input[type="checkbox"]:checked + .header-menu {
+    input[type='checkbox']:checked + .header-menu {
       left: 0;
     }
 
@@ -259,15 +254,12 @@ header {
 }
 
 @include media-lg {
-
   header {
-
     h1 {
       font-size: 16vw !important;
       margin-top: 35vh !important;
     }
     .social-icons {
-
       a i {
         font-size: 40px !important;
       }
@@ -276,9 +268,8 @@ header {
 }
 
 @include media-xl {
-
   header {
-    background-image: url(https://maclapinski.github.io/Bikerland/assets/image-1.jpg) !important;
+    background-image: url(https://maclapinski.github.io/Bikerland/assets/image-1.avif);
 
     h1 {
       font-size: 11vw !important;
@@ -286,7 +277,6 @@ header {
     }
 
     .hero__scroll {
-
       .chevron::before {
         height: 2.5rem;
         width: 2.5rem;
