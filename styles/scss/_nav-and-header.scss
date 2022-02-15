@@ -1,25 +1,40 @@
 header {
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  overflow: hidden;
-  height: 101vh;
   color: $squash;
+  // background-position: center;
+  // background-size: cover;
+  // background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 101vh;
+  justify-content: center;
+  overflow: hidden;
+  overflow: hidden;
   padding: 1rem 1rem;
-  background-image: url(https://maclapinski.github.io/Bikerland/assets/image-1-mobile@2x.avif);
+  position: relative;
+  text-align: center;
 
+  &::before {
+    background: url(https://maclapinski.github.io/Bikerland/assets/image-1-mobile@2x.avif)
+      no-repeat center center;
+    background-color: white;
+    background-size: cover;
+    content: ' ';
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    will-change: transform;
+    z-index: -1;
+  }
   h1 {
     font-size: 3.8rem;
     margin-top: 35vh;
   }
   nav {
     display: flex;
-    margin: 1rem auto;
     justify-content: center;
+    margin: 1rem auto;
     ul {
       display: flex;
       justify-content: center;
@@ -41,17 +56,17 @@ header {
   /* hamburger menu styling */
   i.fa-bars,
   input[type='checkbox'] {
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
     display: none;
+    font-size: 3rem;
+    padding: 0 3px;
     position: fixed;
     right: 30px;
+    text-shadow: 0px 3px 5px #1f2022;
     top: 20px;
     z-index: 10;
-    text-shadow: 0px 3px 5px #1f2022;
-    color: white;
-    font-size: 3rem;
-    border-radius: 5px;
-    padding: 0 3px;
-    cursor: pointer;
   }
 
   .header-menu-social-icons {
@@ -60,12 +75,12 @@ header {
 
   /* social icons styling */
   .social-icons {
-    position: relative;
     bottom: 165px;
-    left: 20px;
-    width: 40px;
     font-size: 2.5rem;
+    left: 20px;
     margin: 0 0 0 auto;
+    position: relative;
+    width: 40px;
   }
 
   .social-icons li {
@@ -79,19 +94,19 @@ header {
   }
 
   .social-icons {
-    position: absolute;
+    bottom: 1rem;
     display: flex;
     flex-direction: column;
-    bottom: 1rem;
+    position: absolute;
     right: 1rem;
 
     a {
-      display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 4px;
-      margin: 3px 0px;
       color: $squash;
+      display: flex;
+      justify-content: center;
+      margin: 3px 0px;
+      padding: 4px;
 
       @include transition-ease;
 
@@ -110,15 +125,6 @@ header {
   .hero__scroll {
     margin-top: auto;
     padding-bottom: 80px;
-
-    .chevron {
-      display: block;
-      color: $squash;
-      margin: 0 auto;
-      width: 50px;
-      -webkit-animation: pulse 1s infinite;
-      animation: pulse 1s infinite;
-    }
 
     @-webkit-keyframes pulse {
       0% {
@@ -150,19 +156,28 @@ header {
       }
     }
 
+    .chevron {
+      -webkit-animation: pulse 1s infinite;
+      animation: pulse 1s infinite;
+      color: $squash;
+      display: block;
+      margin: 0 auto;
+      width: 50px;
+    }
+
     .chevron::before {
       border-style: solid;
       border-width: 0.25em 0.25em 0 0;
       content: '';
       display: inline-block;
-      height: 2rem;
-      width: 2rem;
       font-size: 2rem;
+      height: 2rem;
       position: relative;
       -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
       transform: rotate(-45deg);
       vertical-align: top;
+      width: 2rem;
     }
 
     .chevron.right:before {
@@ -214,22 +229,22 @@ header {
     }
 
     .header-menu {
-      position: fixed;
-      display: block;
-      z-index: 10;
       background-color: white;
-      height: 100vh;
-      width: 33vw;
-      top: 0;
-      left: -33vw;
-      transition: all 0.5s ease;
       color: black;
+      display: block;
+      height: 100vh;
+      left: -33vw;
+      position: fixed;
+      top: 0;
+      transition: all 0.5s ease;
+      width: 33vw;
+      z-index: 10;
     }
 
     .header-menu li,
     .header-menu-social-icons {
-      display: block;
       border-bottom: 2px solid #1f2022;
+      display: block;
       margin: 0;
       padding: 20px 0;
     }
@@ -247,8 +262,8 @@ header {
     .header-menu li:focus-within a,
     .header-menu a:hover,
     .header-menu a:active {
-      color: #f2a11c;
       border-bottom: none;
+      color: #f2a11c;
     }
   }
 }
@@ -269,7 +284,11 @@ header {
 
 @include media-xl {
   header {
-    background-image: url(https://maclapinski.github.io/Bikerland/assets/image-1.avif);
+    &::before {
+      background: url(https://maclapinski.github.io/Bikerland/assets/image-1.avif)
+        no-repeat center center;
+      background-size: cover;
+    }
 
     h1 {
       font-size: 11vw !important;
@@ -278,9 +297,9 @@ header {
 
     .hero__scroll {
       .chevron::before {
+        font-size: 2.5rem;
         height: 2.5rem;
         width: 2.5rem;
-        font-size: 2.5rem;
       }
     }
 
@@ -290,8 +309,8 @@ header {
 
     .social-icons {
       bottom: 50vh !important;
-      transform: translateY(50%);
       right: 3rem !important;
+      transform: translateY(50%);
     }
   }
 }
