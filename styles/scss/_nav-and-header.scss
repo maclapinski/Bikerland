@@ -285,7 +285,7 @@ header {
 @include media-xl {
   header {
     &::before {
-      background: url(/assets/image-1.avif) no-repeat center center;
+      background: url(/Bikerland/assets/image-1.avif) no-repeat center center;
       background-size: cover;
     }
 
