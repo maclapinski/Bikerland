@@ -14,8 +14,7 @@ header {
   text-align: center;
 
   &::before {
-    background: url(/Bikerland/assets/image-1-mobile_2x.avif) no-repeat center
-      center;
+    background: url(/assets/image-1-mobile_2x.webp) no-repeat center center;
     background-color: white;
     background-size: cover;
     content: ' ';
@@ -285,7 +284,7 @@ header {
 @include media-xl {
   header {
     &::before {
-      background: url(/Bikerland/assets/image-1.avif) no-repeat center center;
+      background: url(/assets/image-1.webp) no-repeat center center;
       background-size: cover;
     }
 

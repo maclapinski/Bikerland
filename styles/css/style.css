@@ -8,16 +8,23 @@ body {
   margin: 0;
 }
 
-article, aside, footer, header, nav, section {
+article,
+aside,
+footer,
+header,
+nav,
+section {
   display: block;
 }
 
 h1 {
   font-size: 2em;
-  margin: .67em 0;
+  margin: 0.67em 0;
 }
 
-figcaption, figure, main {
+figcaption,
+figure,
+main {
   display: block;
 }
 
@@ -32,7 +39,7 @@ hr {
 }
 
 pre {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -47,16 +54,20 @@ abbr[title] {
   text-decoration: underline dotted;
 }
 
-b, strong {
+b,
+strong {
   font-weight: inherit;
 }
 
-b, strong {
+b,
+strong {
   font-weight: bolder;
 }
 
-code, kbd, samp {
-  font-family: monospace,monospace;
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -73,7 +84,8 @@ small {
   font-size: 80%;
 }
 
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -81,14 +93,15 @@ sub, sup {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
-audio, video {
+audio,
+video {
   display: inline-block;
 }
 
@@ -105,36 +118,51 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
 }
 
-button, input {
+button,
+input {
   overflow: visible;
 }
 
-button, select {
+button,
+select {
   text-transform: none;
 }
 
-button, html [type=button], [type=reset], [type=submit] {
+button,
+html [type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
 }
 
-button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
 fieldset {
-  padding: .35em .75em .625em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 legend {
@@ -155,21 +183,24 @@ textarea {
   overflow: auto;
 }
 
-[type=checkbox], [type=radio] {
+[type='checkbox'],
+[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-[type=search] {
+[type='search'] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 
-[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -178,7 +209,8 @@ textarea {
   font: inherit;
 }
 
-details, menu {
+details,
+menu {
   display: block;
 }
 
@@ -211,7 +243,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -248,7 +282,7 @@ button {
 h1,
 h2,
 h3 {
-  font-family: "Pacifico", cursive;
+  font-family: 'Pacifico', cursive;
   font-weight: 400;
 }
 
@@ -294,7 +328,7 @@ header {
 }
 
 header::before {
-  background: url(/Bikerland/assets/image-1-mobile_2x.avif) no-repeat center center;
+  background: url(/assets/image-1-mobile_2x.webp) no-repeat center center;
   background-color: white;
   background-size: cover;
   content: ' ';
@@ -331,7 +365,8 @@ header nav ul li a {
   color: #ffffff;
 }
 
-header nav ul li a:hover, header nav ul li a:focus {
+header nav ul li a:hover,
+header nav ul li a:focus {
   border-bottom: 2px solid #f2a11c;
 }
 
@@ -519,7 +554,7 @@ header .hero__scroll .chevron.left:before {
 
 @media screen and (min-width: 1200px) {
   header::before {
-    background: url(/Bikerland/assets/image-1.avif) no-repeat center center;
+    background: url(/assets/image-1.webp) no-repeat center center;
     background-size: cover;
   }
   header h1 {
@@ -565,7 +600,7 @@ header .hero__scroll .chevron.left:before {
   display: flex;
   background-size: cover;
   background-position: center;
-  background-image: url("/Bikerland/assets/image-2.avif");
+  background-image: url('/assets/image-2.webp');
 }
 
 @media screen and (min-width: 1024px) {
@@ -615,7 +650,7 @@ header .hero__scroll .chevron.left:before {
   display: flex;
   background-size: cover;
   background-position: center;
-  background-image: url("/Bikerland/assets/image-7.avif");
+  background-image: url('/assets/image-7.webp');
 }
 
 @media screen and (min-width: 1024px) {
@@ -720,7 +755,7 @@ header .hero__scroll .chevron.left:before {
   color: #ffffff;
   background-position: center right;
   background-size: cover;
-  background-image: url("/Bikerland/assets/image-5.avif");
+  background-image: url('/assets/image-5.webp');
 }
 
 .links i {
@@ -857,7 +892,7 @@ footer form input {
   color: #1f2022;
 }
 
-footer input[type="submit"] {
+footer input[type='submit'] {
   width: 90%;
   min-width: 300px;
   padding: 7px 10px;
@@ -870,7 +905,7 @@ footer input[type="submit"] {
   text-transform: uppercase;
 }
 
-footer input[type="email"] {
+footer input[type='email'] {
   width: 90%;
   min-width: 300px;
   padding: 7px 25px;
@@ -878,7 +913,7 @@ footer input[type="email"] {
   margin-top: 15px;
 }
 
-footer input[type="email"]::placeholder {
+footer input[type='email']::placeholder {
   color: #1f2022;
   opacity: 0.9;
   font-size: 1rem;
@@ -900,11 +935,11 @@ footer input[type="email"]::placeholder {
   footer .contact .email-input {
     display: flex;
   }
-  footer .contact .email-input input[type="submit"] {
+  footer .contact .email-input input[type='submit'] {
     max-width: 150px;
     min-width: auto;
   }
-  footer .contact .email-input input[type="email"]::placeholder {
+  footer .contact .email-input input[type='email']::placeholder {
     text-align: left;
   }
 }
@@ -913,7 +948,7 @@ body {
   height: 100vh;
   background: #ffffff;
   color: #1f2022;
-  font-family: "Catamaran", sans-serif;
+  font-family: 'Catamaran', sans-serif;
   font-size: 20px;
   line-height: 29px;
 }
